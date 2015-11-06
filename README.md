@@ -19,7 +19,7 @@ To install the latest version from github:
 ```
 devtools::install_github("jwijffels/BelgiumMaps.OpenStreetMap")
 ```
-The package size of BelgiumMaps.OpenStreetMap is approximately 140Mb so this takes some time to install.
+The package size of BelgiumMaps.OpenStreetMap is approximately 140Mb so **this takes some time to install (+/- 15min)**.
 
 
 ## Administrative boundaries
