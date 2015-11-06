@@ -61,10 +61,12 @@ tail(sort(table(BE_OSM_POINTS$type)), 10)
 
 ### Railways
 
+Railways, subways, abandoned railwayes, stations, trams, platforms
+
 ```
 data(BE_OSM_RAILWAYS)
 table(BE_OSM_RAILWAYS$type)
-
+             
 library(BelgiumMaps.Admin)
 library(tmap) 
 data(BE_OSM_ADMIN)
