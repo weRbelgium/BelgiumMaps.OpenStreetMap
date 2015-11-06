@@ -1,0 +1,53 @@
+---
+title: "Basic OpenStreetMap data of Belgium"
+author: "Jan Wijffels"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Basic OpenStreetMap data of Belgium}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+An Introduction to **BelgiumMaps.OpenStreetMap** package
+=======================================
+
+
+```{r setup, include=FALSE}
+library(knitr)
+opts_chunk$set(out.extra='style="display:block; margin: auto"', fig.align="center")
+```
+
+Introduction
+------------
+
+The  **BelgiumMaps.OpenStreetMap** package contains geospatial data of Belgium regarding the following topics
+* Landuse
+* Points of interest
+* Railways
+* Roads
+* Waterways
+* Places
+
+
+```{r other geospatial data, eval=FALSE}
+data(BE_OSM_PLACES)
+data(BE_OSM_POINTS)
+data(BE_OSM_RAILWAYS)
+data(BE_OSM_ROADS)
+data(BE_OSM_WATERWAYS)
+data(BE_OSM_LANDUSE)
+
+str(as.data.frame(BE_OSM_ROADS))
+str(as.data.frame(BE_OSM_LANDUSE))
+
+## Plot
+plot(BE_OSM_RAILWAYS)
+plot(BE_OSM_WATERWAYS)
+
+plot(subset(BE_OSM_ROADS, type %in% c("motorway", "primary")))
+plot(subset(BE_OSM_LANDUSE, type == "industrial"))
+lines(subset(BE_OSM_WATERWAYS, type %in% c("canal")), col = "blue")
+plot(subset(BE_OSM_LANDUSE, type == "farmland"), col = "lightgreen")
+
+```
