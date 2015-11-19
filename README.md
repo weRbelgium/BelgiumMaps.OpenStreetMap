@@ -15,6 +15,11 @@ These are basically SpatialPointsDataFrame, SpatialPolygonsDataFrame and Spatial
 
 The R packages are currently only available through github. There are no plans to put these packages on CRAN as the data are too big for the CRAN policy and the text of the spatial data is available in UTF-8 instead of ASCII (which is the preferred encoding at CRAN).
 
+The package is available at datatailor.be
+```
+install.packages("BelgiumMaps.OpenStreetMap", repos = "http://www.datatailor.be/rcube", type = "source")
+```
+
 To install the latest version from github:
 ```
 devtools::install_github("jwijffels/BelgiumMaps.OpenStreetMap")
